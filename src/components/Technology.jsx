@@ -4,7 +4,7 @@ import data from "../common/data/data.json";
 
 import { TECHNOLOGY } from "../common/SpaceObjects";
 
-import mobileTechnologyBg from "../assets/technology/background-technology-mobile.jpg";
+import mobileTechnologyBg from "/assets/technology/background-technology-mobile.jpg";
 
 export default function Technology() {
   const [id, setId] = useState(0);

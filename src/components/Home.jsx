@@ -1,6 +1,6 @@
 import React from 'react'
 
-import mobileHomeBg from '../assets/home/background-home-mobile.jpg'
+import mobileHomeBg from '/assets/home/background-home-mobile.jpg'
 import { useNavigate } from 'react-router-dom'
 
 export default function Home() {

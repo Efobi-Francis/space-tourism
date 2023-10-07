@@ -4,7 +4,7 @@ import data from '../common/data/data.json'
 
 import { CREW } from "../common/SpaceObjects";
 
-import mobileCrewBg from "../assets/crew/background-crew-mobile.jpg";
+import mobileCrewBg from "/assets/crew/background-crew-mobile.jpg";
 
 export default function Crew() {
     const [id, setId] = useState(0)

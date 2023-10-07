@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
-import logo from '../assets/shared/logo.svg'
-import iconhamburger from '../assets/shared/icon-hamburger.svg'
-import iconclose from '../assets/shared/icon-close.svg'
+import logo from '/assets/shared/logo.svg'
+import iconhamburger from '/assets/shared/icon-hamburger.svg'
+import iconclose from '/assets/shared/icon-close.svg'
 
 
 export default function RootLayout() {

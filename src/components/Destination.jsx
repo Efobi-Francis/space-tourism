@@ -7,7 +7,7 @@ import { DESTINATIONS } from "../common/SpaceObjects";
 
 import Destination_Toggle from "../destination_toggle";
 
-import mobileDestinationBg from "../assets/destination/background-destination-mobile.jpg";
+import mobileDestinationBg from "/assets/destination/background-destination-mobile.jpg";
 
 export default function DestinationLayout() {
   const [id, setId] = useState(0);
