@@ -5,7 +5,7 @@ import data from "../common/data/data.json";
 import { DESTINATIONS } from "../common/SpaceObjects";
 
 export default function Destination_Toggle(props) {
-  const { destination_name, btnClick } = props;
+  const { destination_name, btnClick, forwardRef } = props;
 
   const [active, setActive] = useState(false)
 
@@ -67,7 +67,7 @@ export default function Destination_Toggle(props) {
   };
 
   return (
-    <button onClick={btnClick} 
+    <button onClick={btnClick} ref={forwardRef}
         className={`font-barlow-Condensed uppercase leading-none tracking-[2.36px] 
         ${active ? `${btnActiveStyle} focus:before:block focus:before:inset-6 focus:before:left-0 focus:before:right-0 
         focus:before:mx-auto focus:before:absolute focus:before:w-9 focus:before:h-[3px] focus:before:bg-white relative `: ``}`

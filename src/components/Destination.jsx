@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import data from "../common/data/data.json";
 
@@ -12,6 +12,8 @@ import mobileDestinationBg from "/assets/destination/background-destination-mobi
 export default function DestinationLayout() {
   const [id, setId] = useState(0);
 
+  const buttonRef = useRef(null)
+
   const handleClick = (destination) => {
     if (destination === DESTINATIONS.MOON) {
       setId(0);
@@ -23,6 +25,10 @@ export default function DestinationLayout() {
       setId(3);
     }
   };
+
+  useEffect( ()=> {
+    buttonRef.current.focus()
+  },[])
 
 
   return (
@@ -51,6 +57,7 @@ export default function DestinationLayout() {
             <Destination_Toggle
               destination_name={DESTINATIONS.MOON}
               btnClick={() => handleClick(DESTINATIONS.MOON)}
+              forwardRef={buttonRef}
             />
 
             <Destination_Toggle

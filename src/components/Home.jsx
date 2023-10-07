@@ -19,8 +19,8 @@ export default function Home() {
       <div className=' absolute top-28 w-full px-6'>
 
         <div className=" flex flex-col items-center mb-20">
-          <p className=" font-barlow-Condensed text-base uppercase mb-9 tracking-[0.3em]">So, you want to travel to</p>
-          <p className=" font-bellefair text-white text-[5rem] uppercase inline-block tracking-widest leading-none mb-12">Space</p>
+          <p className=" font-barlow-Condensed text-base uppercase mb-9 tracking-[0.2em]">So, you want to travel to</p>
+          <p className=" font-bellefair text-white text-[5rem] uppercase inline-block tracking-wider leading-none mb-12">Space</p>
           <p className=" text-center text-base leading-6 tracking-widest">
             Let's face it; if you want to go to space, you might as well genuinely go to 
             outer space and not hover kind of on the edge of it. Well sit back, and relax 
