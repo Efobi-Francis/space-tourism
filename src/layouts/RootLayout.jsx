@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Link, NavLink, Navigate, Outlet, useNavigate } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, NavLink, Outlet } from 'react-router-dom'
 
 import logo from '/assets/shared/logo.svg'
 import iconhamburger from '/assets/shared/icon-hamburger.svg'
@@ -8,8 +8,6 @@ import iconclose from '/assets/shared/icon-close.svg'
 
 export default function RootLayout() {
   const [isClicked, setIsClicked] = useState(false);
-
-  // const linkRef = useRef(null)
 
   const handleMenuOpen = (e) => {
     e.preventDefault();
@@ -30,10 +28,6 @@ export default function RootLayout() {
   if (!isClicked) {
     hideCloseIcon = ` hidden`
   }
-
-  // useEffect( ()=> {
-  //   linkRef.current && linkRef.current.focus()
-  // }, []);
 
   const btnActive = `uppercase mb-9 tracking-[2.7px] w-full relative before:block before:absolute before:bg-white before:w-1 before:h-8 before:top-0 
   before:bottom-0 before:my-auto before:right-0`
