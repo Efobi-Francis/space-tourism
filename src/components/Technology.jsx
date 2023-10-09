@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
 
 import data from "../common/data/data.json";
 
