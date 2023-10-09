@@ -28,9 +28,6 @@ export default function Technology() {
     buttonRef.current.focus() //sets focus to the first button when the component renders
   },[])
 
-  const btnActive = `w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center focus:bg-white focus:text-[#0B0D17]`
-  const btnDefault = `w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center text-white`
-
   return (
     <div>
       <img src={mobileTechnologyBg} alt="background-technology-mobile" className=" relative w-full h-screen"/>
@@ -53,9 +50,9 @@ export default function Technology() {
 
             <div className=" flex flex-col items-center mt-9 px-6">
                 <div className=" flex justify-between text-white font-bellefair w-[152px]">
-                    <NavLink ref={buttonRef} onClick={ (e)=> handleClick(TECHNOLOGY.LUNCH_VEHICLE, e)} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>1</NavLink>
-                    <NavLink onClick={ (e)=> handleClick(TECHNOLOGY.SPACEPORT, e)} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>2</NavLink>
-                    <NavLink onClick={ (e)=> handleClick(TECHNOLOGY.SPACE_CAPSULE, e)} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>3</NavLink>
+                    <button ref={buttonRef} onClick={ (e)=> handleClick(TECHNOLOGY.LUNCH_VEHICLE, e)} className='w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center focus:bg-white focus:text-[#0B0D17]'>1</button>
+                    <button onClick={ (e)=> handleClick(TECHNOLOGY.SPACEPORT, e)} className='w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center focus:bg-white focus:text-[#0B0D17]'>2</button>
+                    <button onClick={ (e)=> handleClick(TECHNOLOGY.SPACE_CAPSULE, e)} className='w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center focus:bg-white focus:text-[#0B0D17]'>3</button>
                 </div>
 
                 <p className=" uppercase tracking-widest mt-6 mb-3">The terminology...</p>

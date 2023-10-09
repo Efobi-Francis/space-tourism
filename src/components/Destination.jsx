@@ -31,7 +31,6 @@ export default function DestinationLayout() {
     buttonRef.current.focus()
   },[])
 
-
   return (
     <div>
       <img src={mobileDestinationBg} alt="background-destination-mobile" className=" relative w-full" />
