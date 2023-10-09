@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import React, { useEffect, useRef, useState } from 'react'
+import { Link, NavLink, Navigate, Outlet, useNavigate } from 'react-router-dom'
 
 import logo from '/assets/shared/logo.svg'
 import iconhamburger from '/assets/shared/icon-hamburger.svg'
@@ -8,6 +8,8 @@ import iconclose from '/assets/shared/icon-close.svg'
 
 export default function RootLayout() {
   const [isClicked, setIsClicked] = useState(false);
+
+  // const linkRef = useRef(null)
 
   const handleMenuOpen = (e) => {
     e.preventDefault();
@@ -28,6 +30,15 @@ export default function RootLayout() {
   if (!isClicked) {
     hideCloseIcon = ` hidden`
   }
+
+  // useEffect( ()=> {
+  //   linkRef.current && linkRef.current.focus()
+  // }, []);
+
+  const btnActive = `uppercase mb-9 tracking-[2.7px] w-full relative before:block before:absolute before:bg-white before:w-1 before:h-8 before:top-0 
+  before:bottom-0 before:my-auto before:right-0`
+  
+  const btnDefault = `uppercase mb-9 tracking-[2.7px] w-full`
 
   return (
     <div className=' font-barlow font-normal text-[#D0D6F9]'>
@@ -50,13 +61,21 @@ export default function RootLayout() {
             <div className=' absolute -top-6 right-0 w-[254px] h-screen bg-white/[0.04] backdrop-blur-[81.55px]'>
 
               <div className=' flex flex-col items-start text-white pl-8 relative top-[118px]'>
-                <Link to={'/'} className='uppercase mb-9 tracking-[2.7px]'><span className=' mr-[14px] font-bold'>00</span>Home</Link>
+                <NavLink to='/'  className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>
+                  <span className=' mr-[14px] font-bold'>00</span>Home
+                </NavLink>
 
-                <Link to={'destination'} className='uppercase mb-9 tracking-[2.7px]'><span className=' mr-[14px] font-bold'>01</span>Destination</Link>
+                <NavLink to='destination' className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`} >
+                  <span className=' mr-[14px] font-bold'>01</span>Destination
+                </NavLink>
 
-                <Link to={'crew'} className='uppercase mb-9 tracking-[2.7px]'><span className=' mr-[14px] font-bold'>02</span>Crew</Link>
+                <NavLink to={'crew'} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>
+                  <span className=' mr-[14px] font-bold'>02</span>Crew
+                </NavLink>
 
-                <Link to={'technology'} className='uppercase tracking-[2.7px]'><span className=' mr-[14px] font-bold'>03</span>Technology</Link>
+                <NavLink to={'technology'} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>
+                  <span className=' mr-[14px] font-bold'>03</span>Technology
+                </NavLink>
               </div>
             </div>
           )}

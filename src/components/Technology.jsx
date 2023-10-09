@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 import data from "../common/data/data.json";
 
@@ -6,12 +7,14 @@ import { TECHNOLOGY } from "../common/SpaceObjects";
 
 import mobileTechnologyBg from "/assets/technology/background-technology-mobile.jpg";
 
+
 export default function Technology() {
   const [id, setId] = useState(0);
 
   const buttonRef = useRef(null);
 
-  const handleClick = (technology) => {
+  const handleClick = (technology, e) => {
+    e.preventDefault();
     if (technology === TECHNOLOGY.LUNCH_VEHICLE) {
       setId(0);
     } else if (technology === TECHNOLOGY.SPACEPORT) {
@@ -24,6 +27,9 @@ export default function Technology() {
   useEffect( ()=> {
     buttonRef.current.focus() //sets focus to the first button when the component renders
   },[])
+
+  const btnActive = `w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center focus:bg-white focus:text-[#0B0D17]`
+  const btnDefault = `w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center text-white`
 
   return (
     <div>
@@ -47,9 +53,9 @@ export default function Technology() {
 
             <div className=" flex flex-col items-center mt-9 px-6">
                 <div className=" flex justify-between text-white font-bellefair w-[152px]">
-                    <button ref={buttonRef} onClick={ ()=> handleClick(TECHNOLOGY.LUNCH_VEHICLE)} className=" w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center focus:bg-white focus:text-[#0B0D17]">1</button>
-                    <button onClick={ ()=> handleClick(TECHNOLOGY.SPACEPORT)} className=" w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center focus:bg-white focus:text-[#0B0D17]">2</button>
-                    <button onClick={ ()=> handleClick(TECHNOLOGY.SPACE_CAPSULE)} className=" w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center focus:bg-white focus:text-[#0B0D17]">3</button>
+                    <NavLink ref={buttonRef} onClick={ (e)=> handleClick(TECHNOLOGY.LUNCH_VEHICLE, e)} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>1</NavLink>
+                    <NavLink onClick={ (e)=> handleClick(TECHNOLOGY.SPACEPORT, e)} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>2</NavLink>
+                    <NavLink onClick={ (e)=> handleClick(TECHNOLOGY.SPACE_CAPSULE, e)} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>3</NavLink>
                 </div>
 
                 <p className=" uppercase tracking-widest mt-6 mb-3">The terminology...</p>

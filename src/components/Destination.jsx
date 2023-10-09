@@ -14,7 +14,8 @@ export default function DestinationLayout() {
 
   const buttonRef = useRef(null)
 
-  const handleClick = (destination) => {
+  const handleClick = (destination, e) => {
+    e.preventDefault()
     if (destination === DESTINATIONS.MOON) {
       setId(0);
     } else if (destination === DESTINATIONS.MARS) {
@@ -56,23 +57,23 @@ export default function DestinationLayout() {
           <div className=" flex gap-5 mt-6 mb-8">
             <Destination_Toggle
               destination_name={DESTINATIONS.MOON}
-              btnClick={() => handleClick(DESTINATIONS.MOON)}
+              btnClick={(e) => handleClick(DESTINATIONS.MOON, e)}
               forwardRef={buttonRef}
             />
 
             <Destination_Toggle
               destination_name={DESTINATIONS.MARS}
-              btnClick={() => handleClick(DESTINATIONS.MARS)}
+              btnClick={(e) => handleClick(DESTINATIONS.MARS, e)}
             />
 
             <Destination_Toggle 
               destination_name={DESTINATIONS.EUROPA}
-              btnClick={() => handleClick(DESTINATIONS.EUROPA)}
+              btnClick={(e) => handleClick(DESTINATIONS.EUROPA, e)}
             />
 
             <Destination_Toggle 
               destination_name={DESTINATIONS.TITAN} 
-              btnClick={() => handleClick(DESTINATIONS.TITAN)}
+              btnClick={(e) => handleClick(DESTINATIONS.TITAN, e)}
             />
           </div>
 

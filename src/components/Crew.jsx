@@ -11,7 +11,8 @@ export default function Crew() {
 
   const buttonRef = useRef(null);
 
-  const handleClick = (crew) => {
+  const handleClick = (crew, e) => {
+    e.preventDefault()
     if (crew === CREW.COMMANDER) {
       setId(0);
     } else if (crew === CREW.MISSION_SPECIALIST) {
@@ -54,10 +55,10 @@ export default function Crew() {
           <div className=" w-full h-[1px] bg-[#383B4B] mb-8"></div>
 
           <div className=" flex w-[88px] justify-between">
-            <button ref={buttonRef} onClick={ ()=> handleClick(CREW.COMMANDER)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full focus:bg-white"></button>
-            <button onClick={ ()=> handleClick(CREW.MISSION_SPECIALIST)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full focus:bg-white"></button>
-            <button onClick={ ()=> handleClick(CREW.PILOT)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full focus:bg-white"></button>
-            <button onClick={ ()=> handleClick(CREW.FLIGHT_ENGINEER)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full focus:bg-white"></button>
+            <button ref={buttonRef} onClick={ (e)=> handleClick(CREW.COMMANDER, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full focus:bg-white"></button>
+            <button onClick={ (e)=> handleClick(CREW.MISSION_SPECIALIST, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full focus:bg-white"></button>
+            <button onClick={ (e)=> handleClick(CREW.PILOT, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full focus:bg-white"></button>
+            <button onClick={ (e)=> handleClick(CREW.FLIGHT_ENGINEER, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full focus:bg-white"></button>
           </div>
 
           {data.crew.map( (crew, index) => {
