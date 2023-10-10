@@ -29,20 +29,22 @@ export default function RootLayout() {
     hideCloseIcon = ` hidden`
   }
 
-  const btnActive = `uppercase mb-9 tracking-[2.7px] w-full relative before:block before:absolute before:bg-white before:w-1 before:h-8 before:top-0 
+  const btnActive = ` mb-9 w-full relative before:block before:absolute before:bg-white before:w-1 before:h-8 before:top-0 
   before:bottom-0 before:my-auto before:right-0`
-  
-  const btnDefault = `uppercase mb-9 tracking-[2.7px] w-full`
+  const btnDefault = `mb-9 w-full`
+
+  const tabletBtnActive = `relative before:block before:absolute before:w-9 before:h-[3px] before:bg-white before:w-full before:-bottom-9`
 
   return (
     <div className=' font-barlow font-normal text-[#D0D6F9]'>
 
-      <div className=" absolute top-6 w-full px-6 z-10 flex justify-between items-center">
+      <div className=" absolute top-6 w-full px-6 z-10 flex justify-between items-center md:px-10">
         <Link to={'/'}>
-          <img src={logo} alt="logo" className=' w-10 h-10' />
+          <img src={logo} alt="logo" className=' w-10 h-10 md:w-12 md:h-12' />
         </Link>
 
-        <div className=' lg:hidden'>
+        {/* mobile menu */}
+        <div className=' md:hidden'>
           <button onClick={handleMenuOpen}>
             <img src={iconhamburger} alt="icon-hamburger" className={`${hideOpenIcon}`} />
           </button>
@@ -54,12 +56,12 @@ export default function RootLayout() {
           {isClicked && (
             <div className=' absolute -top-6 right-0 w-[254px] h-screen bg-white/[0.04] backdrop-blur-[81.55px]'>
 
-              <div className=' flex flex-col items-start text-white pl-8 relative top-[118px]'>
-                <NavLink to='/'  className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>
+              <div className=' flex flex-col items-start text-white uppercase tracking-[2.7px] pl-8 relative top-[118px]'>
+                <NavLink to={'/'}  className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`}>
                   <span className=' mr-[14px] font-bold'>00</span>Home
                 </NavLink>
 
-                <NavLink to='destination' className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`} >
+                <NavLink to={'destination'} className={({isActive}) => isActive ? `${btnActive}` : `${btnDefault}`} >
                   <span className=' mr-[14px] font-bold'>01</span>Destination
                 </NavLink>
 
@@ -73,6 +75,24 @@ export default function RootLayout() {
               </div>
             </div>
           )}
+        </div>
+        {/* mobile menu end */}
+
+        {/* tablet menu */}
+        <div className=' hidden relative md:flex justify-center w-[356px] gap-9 font-barlow-Condensed text-sm text-white uppercase tracking-[0.15em] '>
+          <div className=' absolute w-[450px] h-24 bg-white/[0.04] -top-10 -right-10 -z-10'></div>
+          <NavLink to={'/'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
+            <span className=''>Home</span>
+          </NavLink>
+          <NavLink to={'destination'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
+            <span>Destination</span>
+          </NavLink>
+          <NavLink to={'crew'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
+            <span>Crew</span>
+          </NavLink>
+          <NavLink to={'technology'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
+            <span>Technology</span>
+          </NavLink>
         </div>
 
       </div>

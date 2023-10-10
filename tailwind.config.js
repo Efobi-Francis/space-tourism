@@ -5,6 +5,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      'md': '768px',
+    },
     fontFamily: {
       'barlow': ['Barlow', 'sans-serif'],
       'barlow-Condensed': ['Barlow Condensed', 'sans-serif'],
