@@ -7,6 +7,7 @@ export default {
   theme: {
     screens: {
       'md': '768px',
+      'lg': '1440px'
     },
     fontFamily: {
       'barlow': ['Barlow', 'sans-serif'],

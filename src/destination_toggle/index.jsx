@@ -69,7 +69,7 @@ export default function Destination_Toggle(props) {
 
   return (
     <button onClick={btnClick} ref={forwardRef}
-        className={`font-barlow-Condensed uppercase leading-none tracking-[2.36px] md:text-xl md:tracking-[2.7px] 
+        className={`font-barlow-Condensed uppercase leading-none tracking-[2.36px] md:text-xl md:tracking-[2.7px] lg:text-base 
         ${active ? `${btnActiveStyle} focus:before:block focus:before:-bottom-3 focus:before:inset-x-0 focus:before:mx-auto 
         focus:before:absolute focus:before:w-9 md:focus:before:w-full focus:before:h-[3px] focus:before:bg-white relative `: ``}`
     }>

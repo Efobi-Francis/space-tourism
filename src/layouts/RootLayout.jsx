@@ -38,10 +38,13 @@ export default function RootLayout() {
   return (
     <div className=' font-barlow font-normal text-[#D0D6F9]'>
 
-      <div className=" absolute top-6 w-full px-6 z-10 flex justify-between items-center md:px-10">
+      <div className=" absolute top-6 w-full px-6 z-10 flex justify-between items-center md:px-10 lg:px-14 lg:top-16">
         <Link to={'/'}>
-          <img src={logo} alt="logo" className=' w-10 h-10 md:w-12 md:h-12' />
+          <img src={logo} alt="logo" className=' w-10 h-10 md:w-12 md:h-12 lg:mr-16' />
         </Link>
+
+        {/* navbar horzontal line */}
+        <div className=' hidden lg:block w-[673px] h-[1px] bg-white/20'></div>
 
         {/* mobile menu */}
         <div className=' md:hidden'>
@@ -79,8 +82,9 @@ export default function RootLayout() {
         {/* mobile menu end */}
 
         {/* tablet menu */}
-        <div className=' hidden relative md:flex justify-center w-[356px] gap-9 font-barlow-Condensed text-sm text-white uppercase tracking-[0.15em] '>
+        <div className=' hidden lg:hidden relative md:flex justify-center w-[356px] gap-9 font-barlow-Condensed text-sm text-white uppercase tracking-[0.15em] '>
           <div className=' absolute w-[450px] h-24 bg-white/[0.04] -top-10 -right-10 -z-10'></div>
+          
           <NavLink to={'/'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
             <span className=''>Home</span>
           </NavLink>
@@ -94,6 +98,28 @@ export default function RootLayout() {
             <span>Technology</span>
           </NavLink>
         </div>
+        {/* tablet menu end */}
+
+        {/* desktop menu */}
+        <div className=' hidden relative lg:flex justify-center w-[542px] gap-14 font-barlow-Condensed text-sm text-white uppercase tracking-[0.15em] basis-3/5'>
+
+          {/* navbar blur background */}
+          <div className=' absolute w-[830px] h-24 bg-white/[0.04] backdrop-blur-[81.55px] -top-10 -right-14 -z-10'></div>
+
+          <NavLink to={'/'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
+          <span className=' mr-[14px] font-bold'>00</span>Home
+          </NavLink>
+          <NavLink to={'destination'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
+          <span className=' mr-[14px] font-bold'>01</span>Destination
+          </NavLink>
+          <NavLink to={'crew'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
+          <span className=' mr-[14px] font-bold'>02</span>Crew
+          </NavLink>
+          <NavLink to={'technology'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
+          <span className=' mr-[14px] font-bold'>03</span>Technology
+          </NavLink>
+        </div>
+        {/* desktop menu end */}
 
       </div>
 
