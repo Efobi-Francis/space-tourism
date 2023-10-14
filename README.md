@@ -1,4 +1,4 @@
-# Frontend Mentor - Intro section with dropdown navigation solution
+# Frontend Mentor - Space tourism website
 
 Your challenge is to build out this multi-page space tourism website and get it looking as close to the design as possible (https://www.frontendmentor.io/challenges/space-tourism-multipage-website-gRWj1URZ3). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
