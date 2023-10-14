@@ -34,6 +34,7 @@ export default function RootLayout() {
   const btnDefault = `mb-9 w-full`
 
   const tabletBtnActive = `relative before:block before:absolute before:w-9 before:h-[3px] before:bg-white before:w-full before:-bottom-9`
+  const desktopBtnHover = `relative hover:before:block hover:before:absolute hover:before:w-9 hover:before:h-[3px] hover:before:bg-white/40 hover:before:w-full hover:before:-bottom-9`
 
   return (
     <div className=' font-barlow font-normal text-[#D0D6F9]'>
@@ -106,17 +107,17 @@ export default function RootLayout() {
           {/* navbar blur background */}
           <div className=' absolute w-[830px] h-24 bg-white/[0.04] backdrop-blur-[81.55px] -top-10 -right-14 -z-10'></div>
 
-          <NavLink to={'/'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
-          <span className=' mr-[14px] font-bold'>00</span>Home
+          <NavLink to={'/'} className={({isActive}) => isActive ? `${tabletBtnActive}`:`${desktopBtnHover}`}>
+            <span className=' mr-[14px] font-bold'>00</span>Home
           </NavLink>
-          <NavLink to={'destination'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
-          <span className=' mr-[14px] font-bold'>01</span>Destination
+          <NavLink to={'destination'} className={({isActive}) => isActive ? `${tabletBtnActive}`:`${desktopBtnHover}`}>
+            <span className=' mr-[14px] font-bold'>01</span>Destination
           </NavLink>
-          <NavLink to={'crew'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
-          <span className=' mr-[14px] font-bold'>02</span>Crew
+          <NavLink to={'crew'} className={({isActive}) => isActive ? `${tabletBtnActive}`:`${desktopBtnHover}`}>
+            <span className=' mr-[14px] font-bold'>02</span>Crew
           </NavLink>
-          <NavLink to={'technology'} className={({isActive}) => isActive ? `${tabletBtnActive}`:''}>
-          <span className=' mr-[14px] font-bold'>03</span>Technology
+          <NavLink to={'technology'} className={({isActive}) => isActive ? `${tabletBtnActive}`:`${desktopBtnHover}`}>
+            <span className=' mr-[14px] font-bold'>03</span>Technology
           </NavLink>
         </div>
         {/* desktop menu end */}

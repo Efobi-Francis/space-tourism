@@ -56,13 +56,13 @@ export default function Technology() {
             <div className=" flex flex-col items-center mt-9 px-6 md:mt-14 lg:flex-row lg:pl-14">
               <div className=" flex justify-between text-white font-bellefair w-[152px] md:w-[210px] md:text-2xl lg:text-[32px] lg:flex-col lg:mr-20 lg:gap-8">
                 <button ref={buttonRef} onClick={ (e)=> handleClick(TECHNOLOGY.LUNCH_VEHICLE, e)} className='w-10 h-10 rounded-full border-2 border-white/40 
-                  flex items-center justify-center focus:bg-white focus:text-[#0B0D17] md:w-[58px] md:h-[58px] lg:w-20 lg:h-20'>1
+                  flex items-center justify-center focus:bg-white focus:text-[#0B0D17] md:w-[58px] md:h-[58px] lg:w-20 lg:h-20 hover:border-white'>1
                 </button>
                 <button onClick={ (e)=> handleClick(TECHNOLOGY.SPACEPORT, e)} className='w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center
-                  focus:bg-white focus:text-[#0B0D17] md:w-[58px] md:h-[58px] lg:w-20 lg:h-20'>2
+                  focus:bg-white focus:text-[#0B0D17] md:w-[58px] md:h-[58px] lg:w-20 lg:h-20 hover:border-white'>2
                 </button>
                 <button onClick={ (e)=> handleClick(TECHNOLOGY.SPACE_CAPSULE, e)} className='w-10 h-10 rounded-full border-2 border-white/40 flex items-center justify-center 
-                  focus:bg-white focus:text-[#0B0D17] md:w-[58px] md:h-[58px] lg:w-20 lg:h-20'>3
+                  focus:bg-white focus:text-[#0B0D17] md:w-[58px] md:h-[58px] lg:w-20 lg:h-20 hover:border-white'>3
                 </button>
               </div>
 

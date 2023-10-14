@@ -61,10 +61,10 @@ export default function Crew() {
             <div className=" w-full h-[1px] bg-[#383B4B] mb-8 md:hidden"></div>
 
             <div className=" flex w-[88px] justify-between md:order-5">
-              <button ref={buttonRef} onClick={ (e)=> handleClick(CREW.COMMANDER, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full lg:w-[15px] lg:h-[15px] focus:bg-white"></button>
-              <button onClick={ (e)=> handleClick(CREW.MISSION_SPECIALIST, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full lg:w-[15px] lg:h-[15px] focus:bg-white"></button>
-              <button onClick={ (e)=> handleClick(CREW.PILOT, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full lg:w-[15px] lg:h-[15px] focus:bg-white"></button>
-              <button onClick={ (e)=> handleClick(CREW.FLIGHT_ENGINEER, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full lg:w-[15px] lg:h-[15px] focus:bg-white"></button>
+              <button ref={buttonRef} onClick={ (e)=> handleClick(CREW.COMMANDER, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full lg:w-[15px] lg:h-[15px] focus:bg-white hover:bg-white/40"></button>
+              <button onClick={ (e)=> handleClick(CREW.MISSION_SPECIALIST, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full lg:w-[15px] lg:h-[15px] focus:bg-white hover:bg-white/40"></button>
+              <button onClick={ (e)=> handleClick(CREW.PILOT, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full lg:w-[15px] lg:h-[15px] focus:bg-white hover:bg-white/40"></button>
+              <button onClick={ (e)=> handleClick(CREW.FLIGHT_ENGINEER, e)} className=" w-[10px] h-[10px] bg-[#383B4B] rounded-full lg:w-[15px] lg:h-[15px] focus:bg-white hover:bg-white/40"></button>
             </div>
 
             {data.crew.map( (crew, index) => {

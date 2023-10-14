@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import data from "../common/data/data.json";
 
 import { DESTINATIONS } from "../common/SpaceObjects";
-import { NavLink } from "react-router-dom";
+
 
 export default function Destination_Toggle(props) {
   const { destination_name, btnClick, forwardRef } = props;
@@ -11,6 +11,8 @@ export default function Destination_Toggle(props) {
   const [active, setActive] = useState(false)
 
   const btnActiveStyle = `active:text-white focus:text-white`
+  const btnHoverStyle = `relative hover:before:block hover:before:absolute hover:before:w-9 hover:before:h-[3px] hover:before:bg-white/40 
+  hover:before:w-full hover:before:-bottom-3`
 
   useEffect( ()=>{
     setActive(true)
@@ -70,7 +72,7 @@ export default function Destination_Toggle(props) {
   return (
     <button onClick={btnClick} ref={forwardRef}
         className={`font-barlow-Condensed uppercase leading-none tracking-[2.36px] md:text-xl md:tracking-[2.7px] lg:text-base 
-        ${active ? `${btnActiveStyle} focus:before:block focus:before:-bottom-3 focus:before:inset-x-0 focus:before:mx-auto 
+        ${active ? `${btnActiveStyle} ${btnHoverStyle} focus:before:block focus:before:-bottom-3 focus:before:inset-x-0 focus:before:mx-auto 
         focus:before:absolute focus:before:w-9 md:focus:before:w-full focus:before:h-[3px] focus:before:bg-white relative `: ``}`
     }>
         {getDestinationName()}

@@ -34,7 +34,8 @@ export default function Home() {
 
         <div className=" flex justify-center">
           <button onClick={handleClick} className=" w-[150px] h-[150px] bg-white rounded-full flex justify-center items-center uppercase text-xl 
-          md:w-[242px] md:h-[242px] md:text-[40px] md:leading-9 lg:w-[274px] lg:h-[274px]">
+            md:w-[242px] md:h-[242px] md:text-[40px] md:leading-9 lg:w-[274px] lg:h-[274px] lg:relative 
+            lg:hover:before:absolute lg:hover:before:w-[450px] lg:hover:before:h-[450px] lg:hover:before:rounded-full lg:hover:before:bg-white/[0.15]">
             <span className=' tracking-widest text-[#0B0D17] md:tracking-[2px]'>Explore</span>
           </button>
         </div>
