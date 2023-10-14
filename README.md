@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Efobi-Francis/space-tourism)
-- Live Site URL: [Github Pages](https://https://fobi-space-tourism.netlify.app/)
+- Live Site URL: [Netlify](https://https://fobi-space-tourism.netlify.app/)
 
 ## My process
 
